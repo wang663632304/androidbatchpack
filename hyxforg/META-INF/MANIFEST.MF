@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Export-Package: androidtools;uses:="org.eclipse.jface.resource,org.ecl
+ ipse.ui.plugin,org.osgi.framework",androidtools.beans,androidtools.co
+ ntext,com.marsor.qxc.android.popup.actions; uses:="org.eclipse.jface.
+ action,  androidtools.beans,  org.eclipse.ui,  org.eclipse.core.resou
+ rces,  org.eclipse.jface.viewers",org.jsoup;uses:="org.jsoup.nodes,or
+ g.jsoup.safety",org.jsoup.examples,org.jsoup.helper;uses:="org.jsoup,
+ new org.jsoup.helper,org.jsoup.nodes",org.jsoup.nodes;uses:="org.jsou
+ p.parser,org.jsoup.select",org.jsoup.parser;uses:="new org.jsoup.pars
+ er,org.jsoup.nodes,org.jsoup.helper",org.jsoup.safety;uses:="org.jsou
+ p.nodes",org.jsoup.select;uses:="org.jsoup.nodes"
+Require-Bundle: org.eclipse.jdt.core,org.eclipse.core.runtime,org.ecli
+ pse.core.resources,org.eclipse.ui,org.eclipse.ui.console,com.android.
+ ide.eclipse.adt,com.android.ide.eclipse.ddms
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: .,lib/jsoup-1.6.1.jar
+Bundle-Version: 1.1.1.201203281135
+Bundle-Name: HyxfTools
+Bundle-Activator: androidtools.Activator
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: HyxfTools;singleton:=true
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+

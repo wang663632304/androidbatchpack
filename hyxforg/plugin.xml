@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+    <extension point="org.eclipse.ui.popupMenus" id="UpdateExtension">
+        <objectContribution 
+            objectClass="org.eclipse.core.resources.IProject"
+            id="HyxfTools.contribution1"
+            adaptable="true"
+        >
+            <action label="更新目录"
+               class="com.marsor.qxc.android.popup.actions.AndroidLibrary"
+               menubarPath="HyxfTools.MarsorLibrary/marsorGroup"
+               enablesFor="1"
+               id="HyxfTools.updateAction" />
+           <action
+                 class="com.marsor.qxc.android.popup.actions.PackageAndPublish"
+                 enablesFor="1"
+                 id="HyxfTools.packageAction"
+                 label="打包发布"
+                 menubarPath="HyxfTools.MarsorLibrary/marsorGroup">
+                 <filter name="projectNature" value="com.android.ide.eclipse.adt.AndroidNature"> </filter>
+           </action>
+        </objectContribution>
+    </extension>
+    <extension point="org.eclipse.ui.popupMenus" id="OpenExtension">
+        <objectContribution 
+            objectClass="org.eclipse.core.runtime.IAdaptable"
+            id="HyxfTools.contribution2"
+            adaptable="true"
+        >
+        <menu label="打渠道包"
+            path="additions"
+            id="HyxfTools.MarsorLibrary">
+            <separator  name="marsorGroup" />
+        </menu>
+        <action label="在资源管理器中打开"
+               class="com.marsor.qxc.android.popup.actions.OpenInExplorerAction"
+               menubarPath="HyxfTools.MarsorLibrary/marsorGroup"
+               enablesFor="1"
+               id="HyxfTools.openAction" />
+        <action label="关于本插件"
+               class="com.marsor.qxc.android.popup.actions.AboutUsAction"
+               menubarPath="HyxfTools.MarsorLibrary/marsorGroup"
+               enablesFor="1"
+               id="HyxfTools.aboutUsAction" />
+      </objectContribution>
+   </extension>
+</plugin>
